@@ -33,7 +33,23 @@ def softmax_loss_naive(W, X, y, reg):
     #############################################################################
     # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-    pass
+    num_data = X.shape[0]
+    num_class = W.shape[1]
+    
+    for i in range(num_data):
+        scores = X[i].dot(W)
+        scores -= np.max(scores)
+        soft_max = np.exp(scores) / np.sum(np.exp(scores))
+        loss += -np.log(soft_max[y[i]])
+        
+        for j in range(num_class):
+            dW[:,j] += soft_max[j] * X[i]
+        dW[:,y[i]] -= X[i]
+        
+    loss = 1 / num_data * loss + reg * np.sum(W * W)
+    
+    dW /= num_data
+    dW += 2 * reg * W
 
     # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
@@ -58,7 +74,22 @@ def softmax_loss_vectorized(W, X, y, reg):
     #############################################################################
     # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-    pass
+    num_data = X.shape[0]
+    num_class = W.shape[1]
+    
+    scores = X.dot(W)
+    max_val = scores[[a for a in range(num_data)],np.argmax(scores,axis=1)]
+    scores -= np.expand_dims(max_val,axis=1)
+    row_sum = np.sum(np.exp(scores),axis=1)
+    soft_max = np.exp(scores) / np.expand_dims(row_sum,axis=1)
+    loss_element = soft_max[[a for a in range(num_data)],y]
+    loss = 1 / num_data * np.sum(-np.log(loss_element)) + reg * np.sum(W * W)
+    
+    mod = soft_max 
+    mod[range(num_data),y] -= 1.
+    dW = X.T.dot(mod)
+    dW /= num_data
+    dW += 2 * reg * W
 
     # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
