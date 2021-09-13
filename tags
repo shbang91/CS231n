@@ -82,7 +82,7 @@ sqrt	assignment1/cs231n/vis_utils.py	/^from math import sqrt, ceil$/;"	i
 svm_loss_naive	assignment1/cs231n/classifiers/linear_svm.py	/^def svm_loss_naive(W, X, y, reg):$/;"	f
 svm_loss_vectorized	assignment1/cs231n/classifiers/linear_svm.py	/^def svm_loss_vectorized(W, X, y, reg):$/;"	f
 train	assignment1/cs231n/classifiers/k_nearest_neighbor.py	/^    def train(self, X, y):$/;"	m	class:KNearestNeighbor
-train	assignment1/cs231n/classifiers/linear_classifier.py	/^    def train(self, X, y, learning_rate=1e-3, reg=1e-5, num_iters=100,$/;"	m	class:LinearClassifier
+train	assignment1/cs231n/classifiers/linear_classifier.py	/^             batch_size=200, verbose=False):$/;"	m	class:LinearClassifier
 train	assignment1/cs231n/classifiers/neural_net.py	/^    def train(self, X, y, X_val, y_val,$/;"	m	class:TwoLayerNet
 uniform_filter	assignment1/cs231n/features.py	/^from scipy.ndimage import uniform_filter$/;"	i
 vis_grid	assignment1/cs231n/vis_utils.py	/^def vis_grid(Xs):$/;"	f
