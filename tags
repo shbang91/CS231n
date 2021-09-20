@@ -24,6 +24,7 @@ eval_numerical_gradient_net	assignment1/cs231n/gradient_check.py	/^def eval_nume
 extract_features	assignment1/cs231n/features.py	/^def extract_features(imgs, feature_fns, verbose=False):$/;"	f
 get_CIFAR10_data	assignment1/cs231n/data_utils.py	/^def get_CIFAR10_data(num_training=49000, num_validation=1000, num_test=1000,$/;"	f
 grad_check_sparse	assignment1/cs231n/gradient_check.py	/^def grad_check_sparse(f, x, analytic_grad, num_checks=10, h=1e-5):$/;"	f
+gradient	assignment1/cs231n/classifiers/softmax.py	/^    soft_max[np.arange(soft_max.shape[0]),y] += -1 #true class gradient$/;"	c	function:softmax_loss_vectorized
 hog_feature	assignment1/cs231n/features.py	/^def hog_feature(im):$/;"	f
 imread	assignment1/cs231n/data_utils.py	/^from scipy.misc import imread$/;"	i
 load_CIFAR10	assignment1/cs231n/data_utils.py	/^def load_CIFAR10(ROOT):$/;"	f
