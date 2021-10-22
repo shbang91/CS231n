@@ -4,41 +4,124 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+Extension	assignment2/cs231n/setup.py	/^from distutils.extension import Extension$/;"	i
+FullyConnectedNet	assignment2/cs231n/classifiers/fc_net.py	/^class FullyConnectedNet(object):$/;"	c
 KNearestNeighbor	assignment1/cs231n/classifiers/k_nearest_neighbor.py	/^class KNearestNeighbor(object):$/;"	c
 LinearClassifier	assignment1/cs231n/classifiers/linear_classifier.py	/^class LinearClassifier(object):$/;"	c
 LinearSVM	assignment1/cs231n/classifiers/linear_classifier.py	/^class LinearSVM(LinearClassifier):$/;"	c
+MERGE	assignment2/makepdf.py	/^    MERGE = False$/;"	v
+MERGE	assignment2/makepdf.py	/^    MERGE = True$/;"	v
+PdfFileMerger	assignment2/makepdf.py	/^    from PyPDF2 import PdfFileMerger$/;"	i
 Softmax	assignment1/cs231n/classifiers/linear_classifier.py	/^class Softmax(LinearClassifier):$/;"	c
+Solver	assignment2/cs231n/solver.py	/^class Solver(object):$/;"	c
+ThreeLayerConvNet	assignment2/cs231n/classifiers/cnn.py	/^class ThreeLayerConvNet(object):$/;"	c
 TwoLayerNet	assignment1/cs231n/classifiers/neural_net.py	/^class TwoLayerNet(object):$/;"	c
 __init__	assignment1/cs231n/classifiers/k_nearest_neighbor.py	/^    def __init__(self):$/;"	m	class:KNearestNeighbor
 __init__	assignment1/cs231n/classifiers/linear_classifier.py	/^    def __init__(self):$/;"	m	class:LinearClassifier
 __init__	assignment1/cs231n/classifiers/neural_net.py	/^    def __init__(self, input_size, hidden_size, output_size, std=1e-4):$/;"	m	class:TwoLayerNet
+__init__	assignment2/cs231n/classifiers/cnn.py	/^    def __init__($/;"	m	class:ThreeLayerConvNet
+__init__	assignment2/cs231n/classifiers/fc_net.py	/^    def __init__($/;"	m	class:FullyConnectedNet
+__init__	assignment2/cs231n/solver.py	/^    def __init__(self, model, data, **kwargs):$/;"	m	class:Solver
+_reset	assignment2/cs231n/solver.py	/^    def _reset(self):$/;"	m	class:Solver
+_save_checkpoint	assignment2/cs231n/solver.py	/^    def _save_checkpoint(self):$/;"	m	class:Solver
+_step	assignment2/cs231n/solver.py	/^    def _step(self):$/;"	m	class:Solver
+adam	assignment2/cs231n/optim.py	/^def adam(w, dw, config=None):$/;"	f
+affine_backward	assignment2/cs231n/layers.py	/^def affine_backward(dout, cache):$/;"	f
+affine_forward	assignment2/cs231n/layers.py	/^def affine_forward(x, w, b):$/;"	f
+affine_relu_backward	assignment2/cs231n/layer_utils.py	/^def affine_relu_backward(dout, cache):$/;"	f
+affine_relu_forward	assignment2/cs231n/layer_utils.py	/^def affine_relu_forward(x, w, b):$/;"	f
+argparse	assignment2/makepdf.py	/^import argparse$/;"	i
+args	assignment2/makepdf.py	/^    args = parser.parse_args()$/;"	v
+batchnorm_backward	assignment2/cs231n/layers.py	/^def batchnorm_backward(dout, cache):$/;"	f
+batchnorm_backward_alt	assignment2/cs231n/layers.py	/^def batchnorm_backward_alt(dout, cache):$/;"	f
+batchnorm_forward	assignment2/cs231n/layers.py	/^def batchnorm_forward(x, gamma, beta, bn_param):$/;"	f
 ceil	assignment1/cs231n/vis_utils.py	/^from math import sqrt, ceil$/;"	i
+ceil	assignment2/cs231n/vis_utils.py	/^from math import sqrt, ceil$/;"	i
+check_accuracy	assignment2/cs231n/solver.py	/^    def check_accuracy(self, X, y, num_samples=None, batch_size=100):$/;"	m	class:Solver
+col2im_6d_cython	assignment2/cs231n/fast_layers.py	/^    from .im2col_cython import col2im_6d_cython$/;"	i
+col2im_6d_cython	assignment2/cs231n/im2col_cython.pyx	/^def col2im_6d_cython(np.ndarray[DTYPE_t, ndim=6] cols, int N, int C, int H, int W,$/;"	f
+col2im_6d_cython_inner	assignment2/cs231n/im2col_cython.pyx	/^cdef col2im_6d_cython_inner(np.ndarray[DTYPE_t, ndim=6] cols,$/;"	f
+col2im_cython	assignment2/cs231n/fast_layers.py	/^    from .im2col_cython import col2im_cython, im2col_cython$/;"	i
+col2im_cython	assignment2/cs231n/im2col_cython.pyx	/^def col2im_cython(np.ndarray[DTYPE_t, ndim=2] cols, int N, int C, int H, int W,$/;"	f
+col2im_cython_inner	assignment2/cs231n/im2col_cython.pyx	/^cdef int col2im_cython_inner(np.ndarray[DTYPE_t, ndim=2] cols,$/;"	f
+col2im_indices	assignment2/cs231n/im2col.py	/^def col2im_indices(cols, x_shape, field_height=3, field_width=3, padding=1, stride=1):$/;"	f
 color_histogram_hsv	assignment1/cs231n/features.py	/^def color_histogram_hsv(im, nbin=10, xmin=0, xmax=255, normalized=True):$/;"	f
 compute_distances_no_loops	assignment1/cs231n/classifiers/k_nearest_neighbor.py	/^    def compute_distances_no_loops(self, X):$/;"	m	class:KNearestNeighbor
 compute_distances_one_loop	assignment1/cs231n/classifiers/k_nearest_neighbor.py	/^    def compute_distances_one_loop(self, X):$/;"	m	class:KNearestNeighbor
 compute_distances_two_loops	assignment1/cs231n/classifiers/k_nearest_neighbor.py	/^    def compute_distances_two_loops(self, X):$/;"	m	class:KNearestNeighbor
+conv_backward_fast	assignment2/cs231n/fast_layers.py	/^conv_backward_fast = conv_backward_strides$/;"	v
+conv_backward_im2col	assignment2/cs231n/fast_layers.py	/^def conv_backward_im2col(dout, cache):$/;"	f
+conv_backward_naive	assignment2/cs231n/layers.py	/^def conv_backward_naive(dout, cache):$/;"	f
+conv_backward_strides	assignment2/cs231n/fast_layers.py	/^def conv_backward_strides(dout, cache):$/;"	f
+conv_bn_relu_backward	assignment2/cs231n/layer_utils.py	/^def conv_bn_relu_backward(dout, cache):$/;"	f
+conv_bn_relu_forward	assignment2/cs231n/layer_utils.py	/^def conv_bn_relu_forward(x, w, b, gamma, beta, conv_param, bn_param):$/;"	f
+conv_forward_fast	assignment2/cs231n/fast_layers.py	/^conv_forward_fast = conv_forward_strides$/;"	v
+conv_forward_im2col	assignment2/cs231n/fast_layers.py	/^def conv_forward_im2col(x, w, b, conv_param):$/;"	f
+conv_forward_naive	assignment2/cs231n/layers.py	/^def conv_forward_naive(x, w, b, conv_param):$/;"	f
+conv_forward_strides	assignment2/cs231n/fast_layers.py	/^def conv_forward_strides(x, w, b, conv_param):$/;"	f
+conv_relu_backward	assignment2/cs231n/layer_utils.py	/^def conv_relu_backward(dout, cache):$/;"	f
+conv_relu_forward	assignment2/cs231n/layer_utils.py	/^def conv_relu_forward(x, w, b, conv_param):$/;"	f
+conv_relu_pool_backward	assignment2/cs231n/layer_utils.py	/^def conv_relu_pool_backward(dout, cache):$/;"	f
+conv_relu_pool_forward	assignment2/cs231n/layer_utils.py	/^def conv_relu_pool_forward(x, w, b, conv_param, pool_param):$/;"	f
+cython	assignment2/cs231n/im2col_cython.pyx	/^cimport cython$/;"	i
+cythonize	assignment2/cs231n/setup.py	/^from Cython.Build import cythonize$/;"	i
+division	assignment2/cs231n/solver.py	/^from __future__ import print_function, division$/;"	i
+dropout_backward	assignment2/cs231n/layers.py	/^def dropout_backward(dout, cache):$/;"	f
+dropout_forward	assignment2/cs231n/layers.py	/^def dropout_forward(x, dropout_param):$/;"	f
 eval_numerical_gradient	assignment1/cs231n/gradient_check.py	/^def eval_numerical_gradient(f, x, verbose=True, h=0.00001):$/;"	f
+eval_numerical_gradient	assignment2/cs231n/gradient_check.py	/^def eval_numerical_gradient(f, x, verbose=True, h=0.00001):$/;"	f
 eval_numerical_gradient_array	assignment1/cs231n/gradient_check.py	/^def eval_numerical_gradient_array(f, x, df, h=1e-5):$/;"	f
+eval_numerical_gradient_array	assignment2/cs231n/gradient_check.py	/^def eval_numerical_gradient_array(f, x, df, h=1e-5):$/;"	f
 eval_numerical_gradient_blobs	assignment1/cs231n/gradient_check.py	/^def eval_numerical_gradient_blobs(f, inputs, output, h=1e-5):$/;"	f
+eval_numerical_gradient_blobs	assignment2/cs231n/gradient_check.py	/^def eval_numerical_gradient_blobs(f, inputs, output, h=1e-5):$/;"	f
 eval_numerical_gradient_net	assignment1/cs231n/gradient_check.py	/^def eval_numerical_gradient_net(net, inputs, output, h=1e-5):$/;"	f
+eval_numerical_gradient_net	assignment2/cs231n/gradient_check.py	/^def eval_numerical_gradient_net(net, inputs, output, h=1e-5):$/;"	f
+extensions	assignment2/cs231n/setup.py	/^extensions = [$/;"	v
 extract_features	assignment1/cs231n/features.py	/^def extract_features(imgs, feature_fns, verbose=False):$/;"	f
 get_CIFAR10_data	assignment1/cs231n/data_utils.py	/^def get_CIFAR10_data(num_training=49000, num_validation=1000, num_test=1000,$/;"	f
+get_CIFAR10_data	assignment2/cs231n/data_utils.py	/^def get_CIFAR10_data($/;"	f
+get_im2col_indices	assignment2/cs231n/im2col.py	/^def get_im2col_indices(x_shape, field_height, field_width, padding=1, stride=1):$/;"	f
 grad_check_sparse	assignment1/cs231n/gradient_check.py	/^def grad_check_sparse(f, x, analytic_grad, num_checks=10, h=1e-5):$/;"	f
+grad_check_sparse	assignment2/cs231n/gradient_check.py	/^def grad_check_sparse(f, x, analytic_grad, num_checks=10, h=1e-5):$/;"	f
 gradient	assignment1/cs231n/classifiers/softmax.py	/^    soft_max[np.arange(soft_max.shape[0]),y] += -1 #true class gradient$/;"	c	function:softmax_loss_vectorized
 hog_feature	assignment1/cs231n/features.py	/^def hog_feature(im):$/;"	f
+im2col_cython	assignment2/cs231n/fast_layers.py	/^    from .im2col_cython import col2im_cython, im2col_cython$/;"	i
+im2col_cython	assignment2/cs231n/im2col_cython.pyx	/^def im2col_cython(np.ndarray[DTYPE_t, ndim=4] x, int field_height,$/;"	f
+im2col_cython_inner	assignment2/cs231n/im2col_cython.pyx	/^cdef int im2col_cython_inner(np.ndarray[DTYPE_t, ndim=2] cols,$/;"	f
+im2col_indices	assignment2/cs231n/im2col.py	/^def im2col_indices(x, field_height, field_width, padding=1, stride=1):$/;"	f
 imread	assignment1/cs231n/data_utils.py	/^from scipy.misc import imread$/;"	i
+imread	assignment2/cs231n/data_utils.py	/^from imageio import imread$/;"	i
+layernorm_backward	assignment2/cs231n/layers.py	/^def layernorm_backward(dout, cache):$/;"	f
+layernorm_forward	assignment2/cs231n/layers.py	/^def layernorm_forward(x, gamma, beta, ln_param):$/;"	f
 load_CIFAR10	assignment1/cs231n/data_utils.py	/^def load_CIFAR10(ROOT):$/;"	f
+load_CIFAR10	assignment2/cs231n/data_utils.py	/^def load_CIFAR10(ROOT):$/;"	f
 load_CIFAR_batch	assignment1/cs231n/data_utils.py	/^def load_CIFAR_batch(filename):$/;"	f
+load_CIFAR_batch	assignment2/cs231n/data_utils.py	/^def load_CIFAR_batch(filename):$/;"	f
 load_imagenet_val	assignment1/cs231n/data_utils.py	/^def load_imagenet_val(num=None):$/;"	f
+load_imagenet_val	assignment2/cs231n/data_utils.py	/^def load_imagenet_val(num=None):$/;"	f
 load_models	assignment1/cs231n/data_utils.py	/^def load_models(models_dir):$/;"	f
+load_models	assignment2/cs231n/data_utils.py	/^def load_models(models_dir):$/;"	f
 load_pickle	assignment1/cs231n/data_utils.py	/^def load_pickle(f):$/;"	f
+load_pickle	assignment2/cs231n/data_utils.py	/^def load_pickle(f):$/;"	f
 load_tiny_imagenet	assignment1/cs231n/data_utils.py	/^def load_tiny_imagenet(path, dtype=np.float32, subtract_mean=True):$/;"	f
+load_tiny_imagenet	assignment2/cs231n/data_utils.py	/^def load_tiny_imagenet(path, dtype=np.float32, subtract_mean=True):$/;"	f
 loss	assignment1/cs231n/classifiers/linear_classifier.py	/^    def loss(self, X_batch, y_batch, reg):$/;"	m	class:LinearClassifier
 loss	assignment1/cs231n/classifiers/linear_classifier.py	/^    def loss(self, X_batch, y_batch, reg):$/;"	m	class:LinearSVM
 loss	assignment1/cs231n/classifiers/linear_classifier.py	/^    def loss(self, X_batch, y_batch, reg):$/;"	m	class:Softmax
 loss	assignment1/cs231n/classifiers/neural_net.py	/^    def loss(self, X, y=None, reg=0.0):$/;"	m	class:TwoLayerNet
+loss	assignment2/cs231n/classifiers/cnn.py	/^    def loss(self, X, y=None):$/;"	m	class:ThreeLayerConvNet
+loss	assignment2/cs231n/classifiers/fc_net.py	/^    def loss(self, X, y=None):$/;"	m	class:FullyConnectedNet
+main	assignment2/makepdf.py	/^def main(files):$/;"	f
 matplotlib	assignment1/cs231n/classifiers/neural_net.py	/^import matplotlib.pyplot as plt$/;"	i
 matplotlib	assignment1/cs231n/features.py	/^import matplotlib$/;"	i
+max_pool_backward_fast	assignment2/cs231n/fast_layers.py	/^def max_pool_backward_fast(dout, cache):$/;"	f
+max_pool_backward_im2col	assignment2/cs231n/fast_layers.py	/^def max_pool_backward_im2col(dout, cache):$/;"	f
+max_pool_backward_naive	assignment2/cs231n/layers.py	/^def max_pool_backward_naive(dout, cache):$/;"	f
+max_pool_backward_reshape	assignment2/cs231n/fast_layers.py	/^def max_pool_backward_reshape(dout, cache):$/;"	f
+max_pool_forward_fast	assignment2/cs231n/fast_layers.py	/^def max_pool_forward_fast(x, pool_param):$/;"	f
+max_pool_forward_im2col	assignment2/cs231n/fast_layers.py	/^def max_pool_forward_im2col(x, pool_param):$/;"	f
+max_pool_forward_naive	assignment2/cs231n/layers.py	/^def max_pool_forward_naive(x, pool_param):$/;"	f
+max_pool_forward_reshape	assignment2/cs231n/fast_layers.py	/^def max_pool_forward_reshape(x, pool_param):$/;"	f
 np	assignment1/cs231n/classifiers/k_nearest_neighbor.py	/^import numpy as np$/;"	i
 np	assignment1/cs231n/classifiers/linear_classifier.py	/^import numpy as np$/;"	i
 np	assignment1/cs231n/classifiers/linear_svm.py	/^import numpy as np$/;"	i
@@ -48,12 +131,36 @@ np	assignment1/cs231n/data_utils.py	/^import numpy as np$/;"	i
 np	assignment1/cs231n/features.py	/^import numpy as np$/;"	i
 np	assignment1/cs231n/gradient_check.py	/^import numpy as np$/;"	i
 np	assignment1/cs231n/vis_utils.py	/^import numpy as np$/;"	i
+np	assignment2/cs231n/classifiers/cnn.py	/^import numpy as np$/;"	i
+np	assignment2/cs231n/classifiers/fc_net.py	/^import numpy as np$/;"	i
+np	assignment2/cs231n/data_utils.py	/^import numpy as np$/;"	i
+np	assignment2/cs231n/fast_layers.py	/^import numpy as np$/;"	i
+np	assignment2/cs231n/gradient_check.py	/^import numpy as np$/;"	i
+np	assignment2/cs231n/im2col.py	/^import numpy as np$/;"	i
+np	assignment2/cs231n/im2col_cython.pyx	/^cimport numpy as np$/;"	i
+np	assignment2/cs231n/im2col_cython.pyx	/^import numpy as np$/;"	i
+np	assignment2/cs231n/layers.py	/^import numpy as np$/;"	i
+np	assignment2/cs231n/optim.py	/^import numpy as np$/;"	i
+np	assignment2/cs231n/solver.py	/^import numpy as np$/;"	i
+np	assignment2/cs231n/vis_utils.py	/^import numpy as np$/;"	i
+numpy	assignment2/cs231n/setup.py	/^import numpy$/;"	i
 object	assignment1/cs231n/classifiers/k_nearest_neighbor.py	/^from builtins import object$/;"	i
 object	assignment1/cs231n/classifiers/linear_classifier.py	/^from builtins import object$/;"	i
 object	assignment1/cs231n/classifiers/neural_net.py	/^from builtins import object$/;"	i
+object	assignment2/cs231n/classifiers/cnn.py	/^from builtins import object$/;"	i
+object	assignment2/cs231n/classifiers/fc_net.py	/^from builtins import object$/;"	i
+object	assignment2/cs231n/solver.py	/^from builtins import object$/;"	i
+optim	assignment2/cs231n/solver.py	/^from cs231n import optim$/;"	i
 os	assignment1/cs231n/data_utils.py	/^import os$/;"	i
+os	assignment2/cs231n/data_utils.py	/^import os$/;"	i
+os	assignment2/cs231n/solver.py	/^import os$/;"	i
+os	assignment2/makepdf.py	/^import os$/;"	i
+parser	assignment2/makepdf.py	/^    parser = argparse.ArgumentParser()$/;"	v
 pickle	assignment1/cs231n/data_utils.py	/^from six.moves import cPickle as pickle$/;"	i
+pickle	assignment2/cs231n/data_utils.py	/^from six.moves import cPickle as pickle$/;"	i
+pickle	assignment2/cs231n/solver.py	/^import pickle as pickle$/;"	i
 platform	assignment1/cs231n/data_utils.py	/^import platform$/;"	i
+platform	assignment2/cs231n/data_utils.py	/^import platform$/;"	i
 plt	assignment1/cs231n/classifiers/neural_net.py	/^import matplotlib.pyplot as plt$/;"	i
 predict	assignment1/cs231n/classifiers/k_nearest_neighbor.py	/^    def predict(self, X, k=1, num_loops=0):$/;"	m	class:KNearestNeighbor
 predict	assignment1/cs231n/classifiers/linear_classifier.py	/^    def predict(self, X):$/;"	m	class:LinearClassifier
@@ -64,7 +171,12 @@ print_function	assignment1/cs231n/classifiers/neural_net.py	/^from __future__ im
 print_function	assignment1/cs231n/data_utils.py	/^from __future__ import print_function$/;"	i
 print_function	assignment1/cs231n/features.py	/^from __future__ import print_function$/;"	i
 print_function	assignment1/cs231n/gradient_check.py	/^from __future__ import print_function$/;"	i
+print_function	assignment2/cs231n/data_utils.py	/^from __future__ import print_function$/;"	i
+print_function	assignment2/cs231n/fast_layers.py	/^from __future__ import print_function$/;"	i
+print_function	assignment2/cs231n/gradient_check.py	/^from __future__ import print_function$/;"	i
+print_function	assignment2/cs231n/solver.py	/^from __future__ import print_function, division$/;"	i
 randrange	assignment1/cs231n/gradient_check.py	/^from random import randrange$/;"	i
+randrange	assignment2/cs231n/gradient_check.py	/^from random import randrange$/;"	i
 range	assignment1/cs231n/classifiers/k_nearest_neighbor.py	/^from builtins import range$/;"	i
 range	assignment1/cs231n/classifiers/linear_classifier.py	/^from builtins import range$/;"	i
 range	assignment1/cs231n/classifiers/linear_svm.py	/^from builtins import range$/;"	i
@@ -74,21 +186,46 @@ range	assignment1/cs231n/data_utils.py	/^from builtins import range$/;"	i
 range	assignment1/cs231n/features.py	/^from builtins import range$/;"	i
 range	assignment1/cs231n/gradient_check.py	/^from builtins import range$/;"	i
 range	assignment1/cs231n/vis_utils.py	/^from builtins import range$/;"	i
+range	assignment2/cs231n/classifiers/fc_net.py	/^from builtins import range$/;"	i
+range	assignment2/cs231n/data_utils.py	/^from builtins import range$/;"	i
+range	assignment2/cs231n/gradient_check.py	/^from builtins import range$/;"	i
+range	assignment2/cs231n/im2col.py	/^from builtins import range$/;"	i
+range	assignment2/cs231n/layers.py	/^from builtins import range$/;"	i
+range	assignment2/cs231n/solver.py	/^from builtins import range$/;"	i
+range	assignment2/cs231n/vis_utils.py	/^from builtins import range$/;"	i
+relu_backward	assignment2/cs231n/layers.py	/^def relu_backward(dout, cache):$/;"	f
+relu_forward	assignment2/cs231n/layers.py	/^def relu_forward(x):$/;"	f
 rgb2gray	assignment1/cs231n/features.py	/^def rgb2gray(rgb):$/;"	f
+rmsprop	assignment2/cs231n/optim.py	/^def rmsprop(w, dw, config=None):$/;"	f
+setup	assignment2/cs231n/setup.py	/^from distutils.core import setup$/;"	i
+sgd	assignment2/cs231n/optim.py	/^def sgd(w, dw, config=None):$/;"	f
+sgd_momentum	assignment2/cs231n/optim.py	/^def sgd_momentum(w, dw, config=None):$/;"	f
 shuffle	assignment1/cs231n/classifiers/linear_svm.py	/^from random import shuffle$/;"	i
 shuffle	assignment1/cs231n/classifiers/softmax.py	/^from random import shuffle$/;"	i
+softmax_loss	assignment2/cs231n/layers.py	/^def softmax_loss(x, y):$/;"	f
 softmax_loss_naive	assignment1/cs231n/classifiers/softmax.py	/^def softmax_loss_naive(W, X, y, reg):$/;"	f
 softmax_loss_vectorized	assignment1/cs231n/classifiers/softmax.py	/^def softmax_loss_vectorized(W, X, y, reg):$/;"	f
+spatial_batchnorm_backward	assignment2/cs231n/layers.py	/^def spatial_batchnorm_backward(dout, cache):$/;"	f
+spatial_batchnorm_forward	assignment2/cs231n/layers.py	/^def spatial_batchnorm_forward(x, gamma, beta, bn_param):$/;"	f
+spatial_groupnorm_backward	assignment2/cs231n/layers.py	/^def spatial_groupnorm_backward(dout, cache):$/;"	f
+spatial_groupnorm_forward	assignment2/cs231n/layers.py	/^def spatial_groupnorm_forward(x, gamma, beta, G, gn_param):$/;"	f
 sqrt	assignment1/cs231n/vis_utils.py	/^from math import sqrt, ceil$/;"	i
+sqrt	assignment2/cs231n/vis_utils.py	/^from math import sqrt, ceil$/;"	i
+standard_library	assignment2/cs231n/solver.py	/^from future import standard_library$/;"	i
+subprocess	assignment2/makepdf.py	/^import subprocess$/;"	i
 svm_loss_naive	assignment1/cs231n/classifiers/linear_svm.py	/^def svm_loss_naive(W, X, y, reg):$/;"	f
 svm_loss_vectorized	assignment1/cs231n/classifiers/linear_svm.py	/^def svm_loss_vectorized(W, X, y, reg):$/;"	f
 train	assignment1/cs231n/classifiers/k_nearest_neighbor.py	/^    def train(self, X, y):$/;"	m	class:KNearestNeighbor
 train	assignment1/cs231n/classifiers/linear_classifier.py	/^             batch_size=200, verbose=False):$/;"	m	class:LinearClassifier
 train	assignment1/cs231n/classifiers/neural_net.py	/^    def train(self, X, y, X_val, y_val,$/;"	m	class:TwoLayerNet
+train	assignment2/cs231n/solver.py	/^    def train(self):$/;"	m	class:Solver
 uniform_filter	assignment1/cs231n/features.py	/^from scipy.ndimage import uniform_filter$/;"	i
 vis_grid	assignment1/cs231n/vis_utils.py	/^def vis_grid(Xs):$/;"	f
+vis_grid	assignment2/cs231n/vis_utils.py	/^def vis_grid(Xs):$/;"	f
 vis_nn	assignment1/cs231n/vis_utils.py	/^def vis_nn(rows):$/;"	f
+vis_nn	assignment2/cs231n/vis_utils.py	/^def vis_nn(rows):$/;"	f
 visualize_grid	assignment1/cs231n/vis_utils.py	/^def visualize_grid(Xs, ubound=255.0, padding=1):$/;"	f
+visualize_grid	assignment2/cs231n/vis_utils.py	/^def visualize_grid(Xs, ubound=255.0, padding=1):$/;"	f
 xrange	assignment1/cs231n/classifiers/k_nearest_neighbor.py	/^from past.builtins import xrange$/;"	i
 xrange	assignment1/cs231n/classifiers/linear_classifier.py	/^from past.builtins import xrange$/;"	i
 xrange	assignment1/cs231n/classifiers/linear_svm.py	/^from past.builtins import xrange$/;"	i
@@ -97,4 +234,6 @@ xrange	assignment1/cs231n/classifiers/softmax.py	/^from past.builtins import xra
 xrange	assignment1/cs231n/features.py	/^from past.builtins import xrange$/;"	i
 xrange	assignment1/cs231n/gradient_check.py	/^from past.builtins import xrange$/;"	i
 xrange	assignment1/cs231n/vis_utils.py	/^from past.builtins import xrange$/;"	i
+xrange	assignment2/cs231n/gradient_check.py	/^from past.builtins import xrange$/;"	i
+xrange	assignment2/cs231n/vis_utils.py	/^from past.builtins import xrange$/;"	i
 zip	assignment1/cs231n/features.py	/^from builtins import zip$/;"	i
