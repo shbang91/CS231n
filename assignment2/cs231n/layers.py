@@ -27,7 +27,10 @@ def affine_forward(x, w, b):
     ###########################################################################
     # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-    pass
+    # x = np.reshape(x, (x.shape[0], -1))
+    # out = x.dot(w) + b
+    x_modified = x.reshape(x.shape[0], -1)
+    out = x_modified.dot(w) + b
 
     # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
     ###########################################################################
@@ -59,8 +62,11 @@ def affine_backward(dout, cache):
     # TODO: Implement the affine backward pass.                               #
     ###########################################################################
     # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
-
-    pass
+    x_shape = x.shape
+    dx = dout.dot(w.T).reshape(*x_shape)
+    x_modified = x.reshape(x.shape[0], -1)
+    dw = x_modified.T.dot(dout)
+    db = np.sum(dout, axis=0)
 
     # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
     ###########################################################################
@@ -86,7 +92,7 @@ def relu_forward(x):
     ###########################################################################
     # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-    pass
+    out = np.maximum(x, 0)
 
     # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
     ###########################################################################
@@ -113,7 +119,10 @@ def relu_backward(dout, cache):
     ###########################################################################
     # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-    pass
+    dx = np.zeros_like(x)
+    dx[x > 0] = dout[x > 0]
+
+    # dx = (x > 0) * dout
 
     # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
     ###########################################################################
@@ -187,7 +196,7 @@ def batchnorm_forward(x, gamma, beta, bn_param):
         #                                                                     #
         # Note that though you should be keeping track of the running         #
         # variance, you should normalize the data based on the standard       #
-        # deviation (square root of variance) instead!                        # 
+        # deviation (square root of variance) instead!                        #
         # Referencing the original paper (https://arxiv.org/abs/1502.03167)   #
         # might prove to be helpful.                                          #
         #######################################################################
@@ -700,13 +709,13 @@ def spatial_groupnorm_forward(x, gamma, beta, G, gn_param):
     - cache: Values needed for the backward pass
     """
     out, cache = None, None
-    eps = gn_param.get('eps',1e-5)
+    eps = gn_param.get('eps', 1e-5)
     ###########################################################################
     # TODO: Implement the forward pass for spatial group normalization.       #
     # This will be extremely similar to the layer norm implementation.        #
     # In particular, think about how you could transform the matrix so that   #
     # the bulk of the code is similar to both train-time batch normalization  #
-    # and layer normalization!                                                # 
+    # and layer normalization!                                                #
     ###########################################################################
     # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
